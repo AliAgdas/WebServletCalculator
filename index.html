@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toplama Hesap Makinesi</title>
+</head>
+<body>
+<h1>Toplama Hesap Makinesi</h1>
+<form action="calculate" method="POST">
+    <label for="num1">Birinci Sayi:</label>
+    <input type="text" id="num1" name="num1" required><br><br>
+    <label for="num2">Ikinci Sayi:</label>
+    <input type="text" id="num2" name="num2" required><br><br>
+    <button type="submit">Topla</button>
+</form>
+<br>
+<div id="result">
+    <% if (request.getAttribute("result") != null) { %>
+    <h2>Sonuc: <%= request.getAttribute("result") %></h2>
+    <% } %>
+</div>
+</body>
+</html>
